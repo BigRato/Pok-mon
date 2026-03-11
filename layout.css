@@ -1,0 +1,314 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+:root {
+    --primary-color: #ff5a4e;
+    --secondary-color: #5698d3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.top-nav {
+    width: 100%;
+    position: fixed;
+    height: 7%;
+    display: flex;
+    padding-left: 1%;
+    background-image: radial-gradient(var(--primary-color), darkred);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-box {
+    position: fixed;
+    top: 7%;
+    display: flex;
+    width: 100%;
+    height: 93%;
+}
+
+.content-box .main-box {
+    height: 100%;
+    width: 60%;
+    background-image: url('../assets/fundo.jpg');
+    background-size: cover;
+    background-position: bottom;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box .display {
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    width: 40%;
+    background: linear-gradient(to top, #2986cc, var(--secondary-color), #90cbf7);
+    border-left: groove 30px #ff5a4e;
+    display: grid;
+}
+
+.content-box .display .text-top {
+    margin-top: 40px;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.content-box .display .pokemon-container {
+    position: relative;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+}
+
+.content-box .display .pokemon {
+    animation: mostruary 2s ease-in-out infinite alternate-reverse;
+}
+
+.content-box .display .footer-box {
+    position: relative;
+    top: 20%;
+}
+
+.content-box .display .footer-box .text-bottom {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.main-box .question-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 170px;
+    position: relative;
+
+}
+
+.main-box .question-box .letter .question {
+    position: relative;
+    top: 20%;
+    font-family: 'Rampart One';
+    font-size: 2vw;
+    color: blue;
+}
+
+.main-box .question-box .letter {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+
+.main-box .question-buttons .button {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 30px;
+    border: outset 6px #f2dc21;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.main-box .question-buttons .button:hover {
+    padding: 12px;
+    border-color: var(--secondary-color);
+    background-color: #f2dc21;
+    color: var(--secondary-color);
+    transition: 200ms ease-in-out;
+}
+
+.main-box .question-buttons .button:focus {
+    padding: 12px;
+    border-color: var(--secondary-color);
+    background-color: #f2dc21;
+    color: var(--secondary-color);
+    transition: 200ms ease-in-out;
+}
+
+.top-nav #right-side {
+    position: relative;
+    margin-right: 2%;
+}
+
+.top-nav #left-side a img:hover {
+    transform: scale(1.5);
+    transition: 400ms ease-in-out;
+}
+
+
+.main-box .question-box {
+    width: 70%;
+    height: 350px;
+    border: outset 5px #f2dc21;
+    border-radius: 25px;
+    box-shadow: 2px 5px 7px 2px grey;
+    background-image: url('../assets/background-florest.png');
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.footer-box-mobile{
+    display: none;
+}
+
+
+@keyframes mostruary {
+    from {
+        top: 40px;
+
+    }
+
+    to {
+        margin-top: 44px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    .content-box .display {
+        display: none;
+    }
+
+    .main-box .question-box {
+        width: 70%;
+        height: 50%;
+        border: outset 5px #f2dc21;
+        border-radius: 25px;
+        box-shadow: 2px 5px 7px 2px grey;
+        background-image: url('../assets/background-florest.png');
+        background-size: cover;
+        background-position: center;
+        align-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .main-box .question-box .letter .question {
+        position: relative;
+        top: 20%;
+        font-family: 'Rampart One';
+        font-size: 3vw;
+        color: blue;
+    }
+
+    .content-box .main-box {
+        height: 100%;
+        width: 100%;
+        background-image: url('../assets/fundo.jpg');
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .main-box .question-buttons {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 37%;
+        position: relative;
+
+    }
+
+    .logo-mobile {
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+    }
+
+    .pokemon-mobile {
+        filter: brightness(100%);
+    }
+
+    .footer-box-mobile {
+        display: flex;
+        height: 3%;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+
+        background-color: #f2dc21;
+
+    }
+
+    .text-footer-mobile {
+        font-size: 100%;
+        color: rgb(0, 0, 0);
+
+
+        animation-direction: alternate;
+        animation-duration: 15s linear infinite;
+
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+
+        -moz-animation: showtext 15s linear infinite;
+        -webkit-animation: showtext 15s linear infinite;
+        animation: showtext 15s linear infinite;
+    }
+
+    @-moz-keyframes showtext {
+        from {
+            -moz-transform: translateX(100%);
+        }
+
+        to {
+            -moz-transform: translateX(-100%);
+        }
+    }
+
+    @-webkit-keyframes showtext {
+        from {
+            -webkit-transform: translateX(100%);
+        }
+
+        to {
+            -webkit-transform: translateX(-100%);
+        }
+    }
+
+    @keyframes showtext {
+        from {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+
+        to {
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+    }
+}
